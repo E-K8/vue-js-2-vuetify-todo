@@ -43,7 +43,7 @@
 
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Your task list</v-app-bar-title>
+      <v-app-bar-title>My task list</v-app-bar-title>
 
       <v-spacer></v-spacer>
 
