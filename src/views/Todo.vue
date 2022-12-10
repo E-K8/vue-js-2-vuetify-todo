@@ -12,7 +12,7 @@
       clearable
     ></v-text-field>
 
-    <v-list flat>
+    <v-list v-if="tasks.length" class="pt-0" flat>
       <div v-for="task in tasks" :key="task.id">
         <v-list-item
           @click="doneTask(task.id)"
@@ -40,6 +40,10 @@
         <v-divider></v-divider>
       </div>
     </v-list>
+    <div v-else class="no-tasks">
+      <v-icon size="100" color="green darken-2">mdi-check</v-icon>
+      <div class="text-h5 teal--text">ALL DONE</div>
+    </div>
   </div>
 </template>
 
@@ -78,3 +82,12 @@ export default {
   },
 };
 </script>
+
+<style lang="sass">
+.no-tasks
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  opacity: 0.5
+</style>
