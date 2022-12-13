@@ -10,6 +10,9 @@ export default new Vuex.Store({
       { id: 2, title: 'yawn', done: false },
       { id: 3, title: 'stretch', done: false },
     ],
+    snackbar: {
+      show: true,
+    },
   },
   getters: {},
   mutations: {

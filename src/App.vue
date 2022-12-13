@@ -62,11 +62,13 @@
 
     <v-main>
       <router-view></router-view>
+      <snackbar />
     </v-main>
   </v-app>
 </template>
 
 <script>
+import SnackbarVue from './components/Global/Snackbar.vue';
 export default {
   data: () => ({
     drawer: null,
@@ -75,5 +77,8 @@ export default {
       { title: 'About', icon: 'mdi-calendar-question', to: '/about' },
     ],
   }),
+  components: {
+    snackbar: SnackbarVue,
+  },
 };
 </script>
